@@ -1,0 +1,10 @@
+import serial
+Data = serial.Serial('com5',9600)
+def led_on():
+    serialcmd='1'
+    Data.write(serialcmd)
+def led_off():
+    serialcmd1='0'
+    Data.write(serialcmd1.encode())
+
+led_on()
